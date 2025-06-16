@@ -10,7 +10,7 @@ let local_ID_varaibles = get_local_ID_array_from_update();
 export async function Update_items(id) {
     Loader(local_ID_varaibles[9], local_ID_varaibles[14], 4);
     try {
-        const response = await fetch(`http://localhost:2000/api_gate_way/image_array__/${id}`, {
+        const response = await fetch(`https://coin-of-gate-way.onrender.com/api_gate_way/image_array__/${id}`, {
             headers: {
                 "Content-Type": "application/json",
                 "x-api-key": parseInt(localStorage.getItem('key'))

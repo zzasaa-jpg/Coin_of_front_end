@@ -4,7 +4,7 @@ import { notification } from "../../../Notification.js";
 export async function update_Values(id, update_value) {
     let update = update_value();
     try {
-        const response = await fetch(`http://localhost:2000/api_gate_way/update_document__/${id}`, {
+        const response = await fetch(`https://coin-of-gate-way.onrender.com/api_gate_way/update_document__/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

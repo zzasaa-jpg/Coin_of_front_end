@@ -8,7 +8,7 @@ let local_ID_varaibles = get_local_ID_array_from_update();
 let array = get_Main_Array_();
 
 export function fetch_Ids() {
-    fetch("http://localhost:2000/api_gate_way/get_all_documents_", {
+    fetch("https://coin-of-gate-way.onrender.com/api_gate_way/get_all_documents_", {
         headers: {
             "Content-Type": "application/json",
             "x-api-key": parseInt(localStorage.getItem('key'))

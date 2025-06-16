@@ -12,7 +12,7 @@ let create_element_array = get_create_element_Array_Images_js();
 
 export function Get_images_from_DB() {
     Loader(create_element_array[0], create_element_array[3], 0);
-    fetch(" http://localhost:2000/api_gate_way/get_all_documents_", {
+    fetch("https://coin-of-gate-way.onrender.com/api_gate_way/get_all_documents_", {
         headers: {
             "Content-Type": "application/json",
             "x-api-key": parseInt(localStorage.getItem('key'))
