@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/Styles/Function_Image_Styles/index.css">
+</head>
+
+<body>
+    <!------------------------upload section------------------------->
+    <nav id="nav">
+        <h1>Coin_of</h1>
+        <a href="./image.html" id="link">Image</a>
+    </nav>
+    <form id="form">
+        <input type="file" name="files" id="files" accept="image/jpeg, image/jpg, image/png" multiple required
+            capture="environment">
+        <input type="text" name="coin_of" id="coin_of" maxlength="14" placeholder="Info..." required>
+        <input type="submit" value="Upload" id="submit">
+        <span id="size">0 mb</span>
+    </form>
+    <div id="image_container"></div>
+    <!-----------------------upload section end--------------------->
+
+    <!---------------------local storage section-------------------->
+    <section id="local_storage_section">
+        <div id="local_storage_div">
+            <input type="text" name="local_storage_key" id="local_storage_key" placeholder="Enter key...">
+            <input type="text" name="local_storage_value" id="local_storage_value" placeholder="Enter value...">
+            <!-- <span class="error_for_value"></span> -->
+            <button type="button" id="set_btn">Set</button>
+        </div>
+    </section>
+    <!----------------------end of local storage-------------------->
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/Styles/Delete_Div_Styles/delete_div.css">
+</head>
+
+<body>
+    <!-------------------------delete section----------------------->
+    <section id="delete_section">
+        <button id="close_delete_section"><ion-icon name="close-outline"></ion-icon></button>
+        <div id="delete_container">
+            <div id="select_div">
+                <div>
+                    <label for="select_tag">Choice:</label>
+                    <select name="select_tag" id="select_tag">
+                        <option value="none" selected>Select Value</option>
+                        <option value="delete">Delete</option>
+                        <option value="update">Update</option>
+                    </select>
+                    <button id="Delete_all_btn">Delete All</button>
+                </div>
+                <div id="mobile_close_btn_div">
+                </div>
+            </div>
+            <div id="setting_img_div">
+                <img src="./assets/Images/setting.png" alt="img" width="200px" id="setting_img">
+            </div>
+            <div id="table_container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Coin Of</th>
+                            <th>Check</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table"></tbody>
+                </table>
+            </div>
+            <input id="input_submit" type="submit" value="Delete" disabled>
+            <!-- --------------------------------------------------- -->
+            <div id="images_div">
+            </div>
+            <button type="submit" id="get_images_btn" disabled>Get Images</button>
+            <input type="text" id="coin_of" value="">
+            <span class="error" id="coin_of_Error"></span>
+            <!-- <label for="coin_of">
+            </label> -->
+            <form id="form2">
+                <input type="file" name="upload_image" id="upload_image" accept="image/jpeg, image/jpg, image/png"
+                    multiple>
+                <span id="file_size_span">File Size: </span>
+            </form>
+            <div id="upload_image_container_from_update"></div>
+            <button type="submit" id="update_btn" disabled>Update</button>
+        </div>
+    </section>
+    <!-----------------------delete section end--------------------->
+    <script type="module" src="./delete_div.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

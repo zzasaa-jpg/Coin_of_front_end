@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/Styles/Function_Image_Styles/image_zoom.css">
+</head>
+
+<body id="body">
+    <div id="gallery"></div>
+    <button id="Image_Zoom">Image Zoom</button>
+    <button id="Close_Image_Zoom"><ion-icon name="close-outline"></ion-icon></button>
+    <section id="image_container_parent">
+        <button id="chevron-back-btn">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+        <img alt="img" id="img">
+        <div id="image_receiver"></div>
+        <div id="lens"></div>
+        <button id="chevron-forward-btn">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+        <div id="size_div">
+            <label for="Size_select" id="Size_label">Sizes:</label>
+            <select name="Size_select" id="Size_select">
+                <option value="300x500">300x500</option>
+                <option value="500x300">500x300</option>
+                <option value="200x600">200x600</option>
+                <option value="600x200">600x200</option>
+            </select>
+        </div>
+    </section>
+    <script type="module" src="./image_zoom.js"></script>
+    <script type="module" src="./image.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+body {
+    background-color: #090C09;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+#coin_of,
+#files,
+#local_storage_key,
+#local_storage_value {
+    background-color: transparent;
+    border: 0.2px solid white;
+    border-radius: 4px;
+    font-size: larger;
+    color: inherit;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    font-weight: 800;
+    width: -webkit-fill-available;
+}
+
+#coin_of::placeholder {
+    color: white;
+}
+
+#files {
+    font-size: medium;
+    width: -webkit-fill-available;
+}
+
+#submit,
+#set_btn {
+    background-color: transparent;
+    border: 0.2px solid white;
+    color: inherit;
+    font-size: larger;
+    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 500px;
+    border: 0.2px solid;
+    height: 200px;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#link {
+    color: inherit;
+    border: 0.2px solid white;
+    padding: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: 800;
+}
+
+#nav {
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#size {
+    color: inherit;
+    font-weight: 800;
+}
+
+#local_storage_section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000c2;
+    color: white;
+    position: absolute;
+}
+
+#local_storage_div {
+    padding: 8px;
+    justify-content: center;
+    gap: 20px;
+    height: 200px;
+    width: 400px;
+    display: none;
+    flex-direction: column;
+}
+
+#set_btn {
+    display: none;
+    width: 70px;
+}
+
+#image_wrapper_ {
+    height: 150px;
+    width: 150px;
+    border: 0.2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #form {
+        width: -webkit-fill-available;
+    }
+
+    #image_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+    #form {
+        width: auto;
+    }
+}
