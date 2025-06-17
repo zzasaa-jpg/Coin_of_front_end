@@ -9,7 +9,7 @@ export async function update_Values(id, update_value) {
     Loader(local_ID_varaibles[10], local_ID_varaibles[14], 10);
     let update = update_value();
     try {
-        const response = await fetch(`http://localhost:2000/api_gate_way/update_document__/${id}`, {
+        const response = await fetch(`https://coin-of-gate-way.onrender.com/api_gate_way/update_document__/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

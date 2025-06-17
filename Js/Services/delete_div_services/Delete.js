@@ -7,7 +7,7 @@ let local_Id_varaibles = get_local_ID_array_from_update();
 export function del(ids) {
     local_Id_varaibles[5].disabled = true;
     Loader(local_Id_varaibles[6], local_Id_varaibles[14], 4);
-    fetch("http://localhost:2000/api_gate_way/delete_document__", {
+    fetch("https://coin-of-gate-way.onrender.com/api_gate_way/delete_document__", {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json",

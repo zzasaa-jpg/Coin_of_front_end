@@ -10,7 +10,7 @@ let array = get_Main_Array_();
 
 export function fetch_Ids() {
     Loader(local_ID_varaibles[3], local_ID_varaibles[14], 2);
-    fetch("http://localhost:2000/api_gate_way/get_all_documents_", {
+    fetch("https://coin-of-gate-way.onrender.com/api_gate_way/get_all_documents_", {
         headers: {
             "Content-Type": "application/json",
             "x-api-key": parseInt(localStorage.getItem('key'))
