@@ -23,7 +23,7 @@ export function Post_images() {
             form_validation__(document.getElementById("coin_of"), Id_array_script[0], Id_array_script[2], Remove_Loader, "Coin name must be at least 3 characters!");
             return;
         }
-        fetch("https://coin-of-gate-way.onrender.com/api_gate_way/post_image__", {
+        fetch("http://localhost:2000/api_gate_way/post_image__", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -21,7 +21,7 @@ let variables_array = [
     "form2",//20
     "input_image_check_box",//21
     "coin_of_Error",//22
-    "update_container"//23
+    "update_container",//23
 ];
 let local_ID_array_from_update = [];
 variables_array.forEach(element => {

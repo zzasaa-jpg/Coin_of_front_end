@@ -96,6 +96,7 @@ body {
     background-color: #000000c2;
     color: white;
     position: absolute;
+    z-index: 10;
 }
 
 #local_storage_div {

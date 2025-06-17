@@ -12,7 +12,7 @@ let create_element_array = get_create_element_Array_Images_js();
 
 export function Get_images_from_DB() {
     Loader(create_element_array[0], create_element_array[3], 0);
-    fetch("https://coin-of-gate-way.onrender.com/api_gate_way/get_all_documents_", {
+    fetch("http://localhost:2000/api_gate_way/get_all_documents_", {
         headers: {
             "Content-Type": "application/json",
             "x-api-key": parseInt(localStorage.getItem('key'))
@@ -30,22 +30,31 @@ export function Get_images_from_DB() {
         .then(result => {
             Remove_Loader(create_element_array[0], create_element_array[3], 0);
             Empty_image_message(result);
-            result.data.forEach((item) => {
-                Image_div(item);
-                Div_info(item);
-                image_wrapper_parent_div();
-                item.img_url.forEach((base64Img) => {
-                    image_wrapper_div();
-                    img_tag(base64Img);
-                    create_element_array[8].appendChild(create_element_array[9]);
-                    create_element_array[7].appendChild(create_element_array[8]);
-                    create_element_array[4].append(create_element_array[5], create_element_array[6]);
-                    create_element_array[2].append(create_element_array[7], create_element_array[4]);
-                    create_element_array[0].appendChild(create_element_array[2]);
-                });
-            });
+            if (result.message == "from cache") {
+                data_render(result.data.data)
+            } else {
+                data_render(result.data);
+            }
+
         })
         .catch((error) => {
             console.error("❌ Image getting error:", error);
         });
+
+    function data_render(result) {
+        result.forEach((item) => {
+            Image_div(item);
+            Div_info(item);
+            image_wrapper_parent_div();
+            item.img_url.forEach((base64Img) => {
+                image_wrapper_div();
+                img_tag(base64Img);
+                create_element_array[8].appendChild(create_element_array[9]);
+                create_element_array[7].appendChild(create_element_array[8]);
+                create_element_array[4].append(create_element_array[5], create_element_array[6]);
+                create_element_array[2].append(create_element_array[7], create_element_array[4]);
+                create_element_array[0].appendChild(create_element_array[2]);
+            });
+        });
+    }
 }

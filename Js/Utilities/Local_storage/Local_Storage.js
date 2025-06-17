@@ -3,11 +3,19 @@ import { set_local_storage_values } from "./Set_values_of_local_storage.js";
 
 let Id_array_script = get_Id_Array_Script();
 
-export function Render_the_local_storage_section(e) {
+export function Render_the_local_storage_section() {
+    const mediaQuery = window.matchMedia('(max-width: 968px)');
+
+    mediaQuery.addEventListener('change', Render_the_local_storage_section);
+    mediaQuery.addEventListener('load', Render_the_local_storage_section);
+
+    const isMobile = mediaQuery.matches;
+
     if (localStorage.getItem("key")) {
         return;
     }
-    if (e.matches) {
+
+    if (isMobile) {
         Id_array_script[5].style.display = "flex";
         Id_array_script[6].style.display = "flex";
         Id_array_script[9].style.display = "block";

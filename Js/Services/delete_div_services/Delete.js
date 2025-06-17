@@ -3,14 +3,15 @@ import { get_local_ID_array_from_update } from "../../Utilities/delete_div_utili
 import { notification } from "../../../Notification.js";
 
 let local_Id_varaibles = get_local_ID_array_from_update();
+
 export function del(ids) {
     local_Id_varaibles[5].disabled = true;
     Loader(local_Id_varaibles[6], local_Id_varaibles[14], 4);
-    fetch("https://coin-of-gate-way.onrender.com/api_gate_way/delete_document__", {
+    fetch("http://localhost:2000/api_gate_way/delete_document__", {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json",
-            "x-api-key": parseInt(localStorage.getItem('key'))
+            "x-api-key": parseInt(localStorage.getItem('key')),
         },
         body: JSON.stringify({ ids })
     })
