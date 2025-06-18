@@ -1,5 +1,5 @@
 import { notification } from "../../Notification.js";
-import { start_services_parallel } from "./start_backend.js";
+import { start_api_gate_way, start_backend } from "./start_backend.js";
 export async function start_value() {
     try {
         if (!localStorage.getItem("key")) {
@@ -20,11 +20,10 @@ export async function start_value() {
             const data = await response.json();
             console.log(data)
             if (data.value < 10) {
-                // start_api_gate_way();
-                // setTimeout(() => {
-                //     start_backend();
-                // }, 4000);
-                start_services_parallel()
+                start_api_gate_way();
+                setTimeout(() => {
+                    start_backend();
+                }, 4000);
             }
         }
     } catch (error) {
