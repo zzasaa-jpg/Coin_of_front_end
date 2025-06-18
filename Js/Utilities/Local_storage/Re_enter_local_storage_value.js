@@ -18,7 +18,7 @@ export function remove_local_storage_values() {
     function handleSwipe() {
         const diff = startX - endX;
         if (diff > 50) {
-            localStorage.removeItem("key")
+            localStorage.clear();
             Id_array_script[5].style.display = "flex";
             Id_array_script[6].style.display = "flex";
             Id_array_script[9].style.display = "block";

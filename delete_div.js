@@ -7,6 +7,8 @@ import { update_function } from "./Js/Utilities/delete_div_utilities/Update_func
 import { getDeleteArray_ } from "./Js/Utilities/delete_div_utilities/Arrays_.js";
 import { delete_selecet_refresh_true, get_check_value } from "./Js/Utilities/delete_div_utilities/check_value_state.js";
 import { change_window_location } from "./Js/Utilities/Change_window_location.js";
+import { start_value } from "./Js/Utilities/start_value.js";
+
 let local_Id_varaibles = get_local_ID_array_from_update();
 
 const mediaQuery = window.matchMedia('(max-width: 768px)');
@@ -26,3 +28,4 @@ local_Id_varaibles[16].addEventListener("click", function () {
 //----------------------------------------------------
 
 change_window_location("./image.html")//window location change
+start_value();//for increase the value in backend.
