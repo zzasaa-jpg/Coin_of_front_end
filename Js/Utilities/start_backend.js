@@ -46,8 +46,8 @@ export async function start_backend() {
         console.error(error);
     }
 }
+
 async function call___(data) {
-    console.log(data);
     Loader_info("Loading backend server...");
     try {
         const response = await fetch(data, {
@@ -71,13 +71,14 @@ async function call___(data) {
         console.error(error);
     }
 }
+
 let loader_h4;
-function Loader_info(text){
+function Loader_info(text) {
     loader_h4 = document.createElement("h4");
     loader_h4.innerText = text;
     document.body.appendChild(loader_h4);
 }
 
-function Loader_info_remove(){
+function Loader_info_remove() {
     loader_h4.remove();
 }

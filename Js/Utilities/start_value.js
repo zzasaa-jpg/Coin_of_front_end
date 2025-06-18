@@ -18,8 +18,7 @@ export async function start_value() {
         }
         if (response.ok) {
             const data = await response.json();
-            console.log(data)
-            if (data.value < 10) {
+            if (data.value == 1) {
                 start_api_gate_way();
                 setTimeout(() => {
                     start_backend();
