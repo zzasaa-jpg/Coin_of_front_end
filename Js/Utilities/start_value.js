@@ -1,11 +1,11 @@
 import { notification } from "../../Notification.js";
 import { start_api_gate_way, start_backend } from "./start_backend.js";
 export async function start_value() {
-    Loader_info("Backend booting up...");
     try {
         if (!localStorage.getItem("key")) {
             return;
         }
+        Loader_info("Backend booting up...");
         const response = await fetch("https://coin-of-gate-way.onrender.com/val_86556", {
             method: "GET",
             headers: {
