@@ -2,13 +2,9 @@ import { get_Id_Array_Script } from "../function_image_utilities/script.js_varia
 import { set_local_storage_values } from "./Set_values_of_local_storage.js";
 
 let Id_array_script = get_Id_Array_Script();
+const mediaQuery = window.matchMedia('(max-width: 968px)');
 
 export function Render_the_local_storage_section() {
-    const mediaQuery = window.matchMedia('(max-width: 968px)');
-
-    mediaQuery.addEventListener('change', Render_the_local_storage_section);
-    mediaQuery.addEventListener('load', Render_the_local_storage_section);
-
     const isMobile = mediaQuery.matches;
 
     if (localStorage.getItem("key")) {
@@ -30,3 +26,6 @@ export function Render_the_local_storage_section() {
         document.getElementsByTagName('body')[0].style.margin = "revert";
     }
 }
+
+mediaQuery.addEventListener('change', Render_the_local_storage_section);
+window.addEventListener('load', Render_the_local_storage_section);
